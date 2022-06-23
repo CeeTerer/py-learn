@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+</head>
+<body>
+     <form action="{{url_for('edit',index=queried_book.id)}}" method="post">
+        <p>Book Name: {{queried_book['name']}}</p>
+        <p>Current Rating {{queried_book['rating']}}</p>
+         <input hidden="hidden" name="id" value="{{queried_book.id}}">
+        <input name="rating" type="text" placeholder="New Rating">
+        <a type="submit" class="btn btn-warning btn-lg" href="{{url_for('home')}}" role="button">Edit rating</a>
+
+    </form>
+</body>
+</html>
